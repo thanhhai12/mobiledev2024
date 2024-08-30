@@ -16,10 +16,7 @@ public class ForecastFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_forecast, container, false);
-
-        //view.setBackgroundColor(Color.parseColor("#20FF0000"));
-        view.setBackgroundColor(Color.parseColor("#2000FF00"));
-        // view.setBackgroundColor(Color.parseColor("#200000FF"));
+        view.setBackgroundColor(Color.parseColor("#2010FF10"));
 
         return view;
     }
