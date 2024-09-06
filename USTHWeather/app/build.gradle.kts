@@ -8,7 +8,11 @@ android {
 
     defaultConfig {
         applicationId = "vn.edu.usth.weather"
+<<<<<<< HEAD
         minSdk = 24
+=======
+        minSdk = 21
+>>>>>>> a6972c85b761624a9783cfe87c103d3c6f50b310
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
