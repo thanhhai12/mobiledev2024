@@ -1,7 +1,6 @@
 package vn.edu.usth.weather;
 
 import android.os.Bundle;
-<<<<<<< HEAD
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
