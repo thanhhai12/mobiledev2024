@@ -3,12 +3,14 @@ package vn.edu.usth.weather;
 import android.graphics.Color;
 import android.os.Bundle;
 
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.LinearLayout;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,8 +63,20 @@ public class ForecastFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view;
-        view = new View(getActivity());
+        view = new View(getContext());
         view.setBackgroundColor(Color.parseColor("#2000FF00"));
-        return view;
+
+        LinearLayout fLayout = new LinearLayout(getContext());
+        fLayout.setOrientation(LinearLayout.VERTICAL);
+
+        String textView = String.valueOf(new TextView(getContext()));
+        textView = ("Thursday");
+
+        ImageView imageView = new ImageView(getContext());
+        imageView.setImageResource(R.drawable.sun_snow);
+
+        return fLayout;
     }
+
+
 }
