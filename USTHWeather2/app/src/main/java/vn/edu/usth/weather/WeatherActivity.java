@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-
 public class WeatherActivity extends AppCompatActivity {
 
     @Override
@@ -30,13 +29,13 @@ public class WeatherActivity extends AppCompatActivity {
             switch (position) {
                 case 0:
                     // First fragment for Paris
-                    return WeatherAndForecastFragment.newInstance("Paris", "Cloudy");
+                    return WeatherAndForecastFragment.newInstance("Paris", "Cloudy", R.layout.paris_fragment_weather);
                 case 1:
                     // Second fragment for New York
-                    return WeatherAndForecastFragment.newInstance("New York", "Sunny");
+                    return WeatherAndForecastFragment.newInstance("New York", "Sunny", R.layout.newyork_fragment_weather);
                 case 2:
                     // Third fragment for Tokyo
-                    return WeatherAndForecastFragment.newInstance("Tokyo", "Rainy");
+                    return WeatherAndForecastFragment.newInstance("Tokyo", "Rainy", R.layout.tokyo_fragment_weather);
                 default:
                     return null;
             }
@@ -44,7 +43,7 @@ public class WeatherActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 3; // 3 WeatherAndForecastFragments
+            return 3;
         }
     }
 }

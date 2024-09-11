@@ -14,7 +14,7 @@
         android:background="#E3F2FD"
         android:padding="16dp">
 
-        <!-- Monday -->
+        <!-- Fucking Monday/ I hate Monday -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -202,7 +202,7 @@
 
         </LinearLayout>
 
-        <!-- Saturday -->
+        <!-- My Beloved Saturday -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
