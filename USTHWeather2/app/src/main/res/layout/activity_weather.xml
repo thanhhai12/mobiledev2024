@@ -6,7 +6,7 @@
     android:padding="16dp"
     android:background="@android:color/white">
 
-    <!-- USTH Weather Header -->
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,14 +19,13 @@
         android:padding="16dp"
         android:background="#87CEEB"/>
 
-    <!-- WeatherFragment (Green area for current weather) -->
     <fragment
         android:id="@+id/weather_fragment"
         android:name="vn.edu.usth.weather.WeatherFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <!-- ForecastFragment (Blue area for the weather forecast) -->
+
     <fragment
         android:id="@+id/forecast_fragment"
         android:name="vn.edu.usth.weather.ForecastFragment"
