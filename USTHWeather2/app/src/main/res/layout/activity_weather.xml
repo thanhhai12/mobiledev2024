@@ -6,7 +6,6 @@
     android:padding="16dp"
     android:background="@android:color/white">
 
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,21 +14,11 @@
         android:textStyle="bold"
         android:textColor="@android:color/black"
         android:gravity="center"
-        android:layout_gravity="center_horizontal"
         android:padding="16dp"
         android:background="#87CEEB"/>
 
-    <fragment
-        android:id="@+id/weather_fragment"
-        android:name="vn.edu.usth.weather.WeatherFragment"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
-
-    <fragment
-        android:id="@+id/forecast_fragment"
-        android:name="vn.edu.usth.weather.ForecastFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
 </LinearLayout>
