@@ -28,13 +28,10 @@ public class WeatherActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    // First fragment for Paris
                     return WeatherAndForecastFragment.newInstance("Paris", "Cloudy", R.layout.paris_fragment_weather);
                 case 1:
-                    // Second fragment for New York
                     return WeatherAndForecastFragment.newInstance("New York", "Sunny", R.layout.newyork_fragment_weather);
                 case 2:
-                    // Third fragment for Tokyo
                     return WeatherAndForecastFragment.newInstance("Tokyo", "Rainy", R.layout.tokyo_fragment_weather);
                 default:
                     return null;
