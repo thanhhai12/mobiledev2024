@@ -1,5 +1,39 @@
 <resources>
     <string name="app_name">USTH Weather</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="paris_france">Paris, France</string>
+    <string name="new_york_usa">New York, USA</string>
+    <string name="tokyo_japan">Tokyo, Japan</string>
+    <string name="sunny">Sunny</string>
+    <string name="rainy">Rainy</string>
+    <string name="cloudy">Cloudy</string>
+
+
+
+    <string name="temperature_12c">12°C</string>
+    <string name="temperature_15c">15°C</string>
+    <string name="temperature_18c">18°C</string>
+    <string name="temperature_25c">25°C</string>
+    <string name="temperature_mon">24°C - 31°C</string>
+    <string name="temperature_tue">24°C - 30°C</string>
+    <string name="temperature_wed">22°C - 23°C</string>
+    <string name="temperature_thu">22°C - 27°C</string>
+    <string name="temperature_fri">24°C - 30°C</string>
+    <string name="temperature_sat">24°C - 31°C</string>
+    <string name="temperature_sun">25°C - 28°C</string>
+
+
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+    <string name="sun">Sun</string>
+
+
+    <string name="partly_cloudy">Partly Cloudy</string>
+    <string name="showers">Showers</string>
+    <string name="scattered_showers">Scattered Showers</string>
+    <string name="mostly_cloudy">Mostly Cloudy</string>
+    <string name="thunderstorms">Thunderstorms</string>
 </resources>

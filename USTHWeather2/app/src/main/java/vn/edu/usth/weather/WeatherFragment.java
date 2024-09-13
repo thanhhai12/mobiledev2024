@@ -9,16 +9,15 @@ import android.widget.TextView;
 
 public class WeatherFragment extends Fragment {
 
-    private String location;
-    private String weatherCondition;
+    private int locationResId;
+    private int weatherConditionResId;
     private int layoutResource;
 
-
-    public static WeatherFragment newInstance(String location, String weatherCondition, int layoutResource) {
+    public static WeatherFragment newInstance(int locationResId, int weatherConditionResId, int layoutResource) {
         WeatherFragment fragment = new WeatherFragment();
         Bundle args = new Bundle();
-        args.putString("location", location);
-        args.putString("weatherCondition", weatherCondition);
+        args.putInt("locationResId", locationResId);
+        args.putInt("weatherConditionResId", weatherConditionResId);
         args.putInt("layoutResource", layoutResource);
         fragment.setArguments(args);
         return fragment;
@@ -27,11 +26,10 @@ public class WeatherFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (getArguments() != null) {
-            location = getArguments().getString("location");
-            weatherCondition = getArguments().getString("weatherCondition");
+            locationResId = getArguments().getInt("locationResId");
+            weatherConditionResId = getArguments().getInt("weatherConditionResId");
             layoutResource = getArguments().getInt("layoutResource");
         }
-
 
         View view = inflater.inflate(layoutResource, container, false);
 
@@ -39,8 +37,8 @@ public class WeatherFragment extends Fragment {
         TextView conditionTextView = view.findViewById(R.id.weather_condition);
         TextView temperatureTextView = view.findViewById(R.id.weather_temperature);
 
-        locationTextView.setText(location);
-        conditionTextView.setText(weatherCondition);
+        locationTextView.setText(getString(locationResId));
+        conditionTextView.setText(getString(weatherConditionResId));
 
         return view;
     }

@@ -12,16 +12,16 @@ import android.view.ViewGroup;
 
 public class WeatherAndForecastFragment extends Fragment {
 
-    private String location;
-    private String weatherCondition;
+    private int locationResId;
+    private int weatherConditionResId;
     private int weatherLayoutResource;
 
-    // Static method to create a new instance with parameters
-    public static WeatherAndForecastFragment newInstance(String location, String weatherCondition, int layoutResource) {
+
+    public static WeatherAndForecastFragment newInstance(int locationResId, int weatherConditionResId, int layoutResource) {
         WeatherAndForecastFragment fragment = new WeatherAndForecastFragment();
         Bundle args = new Bundle();
-        args.putString("location", location);
-        args.putString("weatherCondition", weatherCondition);
+        args.putInt("locationResId", locationResId);
+        args.putInt("weatherConditionResId", weatherConditionResId);
         args.putInt("layoutResource", layoutResource);
         fragment.setArguments(args);
         return fragment;
@@ -32,15 +32,16 @@ public class WeatherAndForecastFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_weather_and_forecast, container, false);
 
         if (getArguments() != null) {
-            location = getArguments().getString("location");
-            weatherCondition = getArguments().getString("weatherCondition");
+            locationResId = getArguments().getInt("locationResId");
+            weatherConditionResId = getArguments().getInt("weatherConditionResId");
             weatherLayoutResource = getArguments().getInt("layoutResource");
         }
 
         FragmentManager fragmentManager = getChildFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
 
-        WeatherFragment weatherFragment = WeatherFragment.newInstance(location, weatherCondition, weatherLayoutResource);
+
+        WeatherFragment weatherFragment = WeatherFragment.newInstance(locationResId, weatherConditionResId, weatherLayoutResource);
         transaction.replace(R.id.weather_container, weatherFragment);
 
         transaction.replace(R.id.forecast_container, new ForecastFragment());

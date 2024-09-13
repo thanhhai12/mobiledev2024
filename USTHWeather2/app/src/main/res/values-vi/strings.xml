@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">USTH Thời tiết</string>
+    <string name="paris_france">Paris, Pháp</string>
+    <string name="new_york_usa">New York, Hoa Kỳ</string>
+    <string name="tokyo_japan">Tokyo, Nhật Bản</string>
+    <string name="sunny">Nắng</string>
+    <string name="rainy">Mưa</string>
+    <string name="cloudy">Nhiều Mây</string>
+
+
+    <string name="temperature_12c">12°C</string>
+    <string name="temperature_15c">15°C</string>
+    <string name="temperature_18c">18°C</string>
+    <string name="temperature_25c">25°C</string>
+    <string name="temperature_mon">24°C - 31°C</string>
+    <string name="temperature_tue">24°C - 30°C</string>
+    <string name="temperature_wed">22°C - 23°C</string>
+    <string name="temperature_thu">22°C - 27°C</string>
+    <string name="temperature_fri">24°C - 30°C</string>
+    <string name="temperature_sat">24°C - 31°C</string>
+    <string name="temperature_sun">25°C - 28°C</string>
+
+
+
+    <string name="mon">Thứ hai</string>
+    <string name="tue">Thư ba</string>
+    <string name="wed">Thứ tư</string>
+    <string name="thu">Thứ năm</string>
+    <string name="fri">Thứ sáu</string>
+    <string name="sat">Thứ bảy</string>
+    <string name="sun">Chủ nhật</string>
+
+
+
+    <string name="partly_cloudy">Quang Mây</string>
+    <string name="showers">Mưa rào</string>
+    <string name="scattered_showers">Mưa rào rải rác</string>
+    <string name="mostly_cloudy">Nhiều Mây</string>
+    <string name="thunderstorms">Dông tố</string>
+</resources>
+

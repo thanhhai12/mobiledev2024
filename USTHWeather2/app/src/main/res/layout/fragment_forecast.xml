@@ -1,33 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="@dimen/padding_large"
     android:background="@android:color/white">
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#E3F2FD"
-        android:padding="16dp">
+        android:background="@color/blue_background"
+        android:padding="@dimen/padding_large">
 
-        <!-- Fucking Monday/ I hate Monday -->
+        <!-- Hell yeah, fucking monday -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:padding="@dimen/padding_medium">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Mon"
-                android:textSize="14sp"
-                android:textColor="@android:color/black" />
+                android:text="@string/mon"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/black" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -37,18 +35,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Partly Cloudy"
-                android:textSize="14sp"
-                android:paddingStart="8dp"
-                android:textColor="@android:color/black" />
+                android:text="@string/partly_cloudy"
+                android:textSize="@dimen/text_size_small"
+                android:paddingStart="@dimen/padding_medium"
+                android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="24°C - 31°C"
-                android:textSize="14sp"
-                android:paddingStart="16dp"
-                android:textColor="@android:color/black" />
+                android:text="@string/temperature_mon"
+                android:textSize="@dimen/text_size_small"
+                android:paddingStart="@dimen/padding_large"
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <!-- Tuesday -->
@@ -56,15 +54,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:padding="@dimen/padding_medium">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Tue"
-                android:textSize="14sp"
-                android:textColor="@android:color/black" />
+                android:text="@string/tue"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/black" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -74,18 +72,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Showers"
-                android:textSize="14sp"
-                android:paddingStart="8dp"
-                android:textColor="@android:color/black" />
+                android:text="@string/showers"
+                android:textSize="@dimen/text_size_small"
+                android:paddingStart="@dimen/padding_medium"
+                android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="24°C - 30°C"
-                android:textSize="14sp"
-                android:paddingStart="16dp"
-                android:textColor="@android:color/black" />
+                android:text="@string/temperature_tue"
+                android:textSize="@dimen/text_size_small"
+                android:paddingStart="@dimen/padding_large"
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <!-- Wednesday -->
@@ -93,15 +91,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:padding="@dimen/padding_medium">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Wed"
-                android:textSize="14sp"
-                android:textColor="#000" />
+                android:text="@string/wed"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/black" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -111,19 +109,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rain"
-                android:textSize="14sp"
-                android:paddingStart="8dp"
-                android:textColor="#000" />
+                android:text="@string/showers"
+                android:textSize="@dimen/text_size_small"
+                android:paddingStart="@dimen/padding_medium"
+                android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="22°C - 23°C"
-                android:textSize="14sp"
-                android:paddingStart="16dp"
-                android:textColor="#000" />
-
+                android:text="@string/temperature_wed"
+                android:textSize="@dimen/text_size_small"
+                android:paddingStart="@dimen/padding_large"
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <!-- Thursday -->
@@ -131,15 +128,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:padding="@dimen/padding_medium">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Thu"
-                android:textSize="14sp"
-                android:textColor="#000" />
+                android:text="@string/thu"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/black" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -149,19 +146,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Scattered Showers"
-                android:textSize="14sp"
-                android:paddingStart="8dp"
-                android:textColor="#000" />
+                android:text="@string/scattered_showers"
+                android:textSize="@dimen/text_size_small"
+                android:paddingStart="@dimen/padding_medium"
+                android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="22°C - 27°C"
-                android:textSize="14sp"
-                android:paddingStart="16dp"
-                android:textColor="#000" />
-
+                android:text="@string/temperature_thu"
+                android:textSize="@dimen/text_size_small"
+                android:paddingStart="@dimen/padding_large"
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <!-- Friday -->
@@ -169,15 +165,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:padding="@dimen/padding_medium">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Fri"
-                android:textSize="14sp"
-                android:textColor="#000" />
+                android:text="@string/fri"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/black" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -187,35 +183,34 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mostly Cloudy"
-                android:textSize="14sp"
-                android:paddingStart="8dp"
-                android:textColor="#000" />
+                android:text="@string/mostly_cloudy"
+                android:textSize="@dimen/text_size_small"
+                android:paddingStart="@dimen/padding_medium"
+                android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="24°C - 30°C"
-                android:textSize="14sp"
-                android:paddingStart="16dp"
-                android:textColor="#000" />
-
+                android:text="@string/temperature_fri"
+                android:textSize="@dimen/text_size_small"
+                android:paddingStart="@dimen/padding_large"
+                android:textColor="@color/black" />
         </LinearLayout>
 
-        <!-- My Beloved Saturday -->
+        <!-- Saturday -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:padding="@dimen/padding_medium">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Sat"
-                android:textSize="14sp"
-                android:textColor="#000" />
+                android:text="@string/sat"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/black" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -225,33 +220,34 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Partly Cloudy"
-                android:textSize="14sp"
-                android:paddingStart="8dp"
-                android:textColor="#000" />
+                android:text="@string/partly_cloudy"
+                android:textSize="@dimen/text_size_small"
+                android:paddingStart="@dimen/padding_medium"
+                android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="24°C - 31°C"
-                android:textSize="14sp"
-                android:paddingStart="16dp"
-                android:textColor="#000" />
-
+                android:text="@string/temperature_sat"
+                android:textSize="@dimen/text_size_small"
+                android:paddingStart="@dimen/padding_large"
+                android:textColor="@color/black" />
         </LinearLayout>
+
+        <!-- Sunday -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:padding="@dimen/padding_medium">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Sun"
-                android:textSize="14sp"
-                android:textColor="#000" />
+                android:text="@string/sun"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/black" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -261,18 +257,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Thunderstorms"
-                android:textSize="14sp"
-                android:paddingStart="8dp"
-                android:textColor="#000" />
+                android:text="@string/thunderstorms"
+                android:textSize="@dimen/text_size_small"
+                android:paddingStart="@dimen/padding_medium"
+                android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="25°C - 28°C"
-                android:textSize="14sp"
-                android:paddingStart="16dp"
-                android:textColor="#000" />
+                android:text="@string/temperature_sun"
+                android:textSize="@dimen/text_size_small"
+                android:paddingStart="@dimen/padding_large"
+                android:textColor="@color/black" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
