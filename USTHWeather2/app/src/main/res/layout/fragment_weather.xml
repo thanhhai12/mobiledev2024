@@ -1,27 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#A8E6A6"
-    android:padding="16dp">
-
+    android:background="@drawable/frame"
+    android:padding="@dimen/padding_large">
 
     <TextView
         android:id="@+id/weather_temperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="12C"
-        android:textSize="28sp"
-        android:textColor="@android:color/black"
+        android:text="@string/temperature_25c"
+        android:textSize="@dimen/text_size_large"
+        android:textColor="@color/black"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/weather_condition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cloudy"
-        android:textSize="20sp"
-        android:textColor="@android:color/black"
+        android:text="@string/sunny"
+        android:textSize="@dimen/text_size_medium"
+        android:background="@android:color/holo_blue_light"
         android:layout_below="@id/weather_temperature"
         android:layout_marginTop="8dp" />
 
@@ -37,11 +36,10 @@
         android:id="@+id/weather_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Paris"
-        android:textSize="18sp"
-        android:textColor="@android:color/black"
+        android:text="@string/new_york_usa"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/black"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="8dp"
         android:layout_below="@id/weather_icon" />
-
 </RelativeLayout>
