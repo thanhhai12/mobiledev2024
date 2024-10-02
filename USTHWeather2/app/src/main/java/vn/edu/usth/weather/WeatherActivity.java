@@ -1,5 +1,6 @@
 package vn.edu.usth.weather;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,9 +16,6 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
-
-
-
 public class WeatherActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
@@ -29,10 +27,8 @@ public class WeatherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
 
-
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         viewPager = findViewById(R.id.viewPager);
         tabLayout = findViewById(R.id.tabLayout);
@@ -50,7 +46,6 @@ public class WeatherActivity extends AppCompatActivity {
         tabLayout.getTabAt(1).setText(getString(R.string.new_york_usa));
         tabLayout.getTabAt(2).setText(getString(R.string.tokyo_japan));
     }
-
 
     private class WeatherPagerAdapter extends FragmentPagerAdapter {
 
@@ -95,6 +90,7 @@ public class WeatherActivity extends AppCompatActivity {
             return null;
         }
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -105,7 +101,8 @@ public class WeatherActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case 0x7f0a0000:
-                refreshContent();
+                // Call AsyncTask to refresh content
+                new RefreshContentTask().execute();
                 return true;
 
             default:
@@ -113,26 +110,25 @@ public class WeatherActivity extends AppCompatActivity {
         }
     }
 
+    // Define the AsyncTask to refresh content
+    private class RefreshContentTask extends AsyncTask<Void, Void, Void> {
 
-    private void refreshContent() {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    // Simulate network delay
-                    Thread.sleep(2000);
-
-                    // Update UI on the main thread
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(WeatherActivity.this, "Content refreshed", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+        @Override
+        protected Void doInBackground(Void... voids) {
+            try {
+                // Simulate network delay
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-        }).start();
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+            // Show a toast when refresh is complete
+            Toast.makeText(WeatherActivity.this, "Content refreshed", Toast.LENGTH_SHORT).show();
+        }
     }
 }

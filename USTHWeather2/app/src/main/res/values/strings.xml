@@ -1,5 +1,8 @@
 <resources>
+
+
     <string name="app_name">USTH Weather</string>
+    <string name="logo_description" translatable="false">USTH Logo</string>
     <string name="paris_france">Paris, France</string>
     <string name="new_york_usa">New York, USA</string>
     <string name="tokyo_japan">Tokyo, Japan</string>
@@ -37,3 +40,6 @@
     <string name="mostly_cloudy">Mostly Cloudy</string>
     <string name="thunderstorms">Thunderstorms</string>
 </resources>
+
+
+
