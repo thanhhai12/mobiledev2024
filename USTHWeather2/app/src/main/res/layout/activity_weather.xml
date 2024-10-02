@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
     android:background="@android:color/white">
 
+    <!-- TextView for the App Name or Title -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,16 +17,26 @@
         android:textColor="@color/black"
         android:gravity="center"
         android:padding="@dimen/padding_large"
-        android:background="@color/bright_grey"/>
+        android:background="@color/bright_grey" />
 
+    <!-- Toolbar for the Action Bar with Menu -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp" />
 
+    <!-- TabLayout to display tabs -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <!-- ViewPager for Fragment Swiping -->
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent" />
+
 </LinearLayout>

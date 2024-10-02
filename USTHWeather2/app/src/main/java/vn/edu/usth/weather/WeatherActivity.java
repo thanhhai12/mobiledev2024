@@ -1,23 +1,38 @@
 package vn.edu.usth.weather;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+
 import com.google.android.material.tabs.TabLayout;
+
+
+
 
 public class WeatherActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
+
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
 
         viewPager = findViewById(R.id.viewPager);
         tabLayout = findViewById(R.id.tabLayout);
@@ -31,23 +46,22 @@ public class WeatherActivity extends AppCompatActivity {
     }
 
     private void setupTabTitles() {
-
         tabLayout.getTabAt(0).setText(getString(R.string.paris_france));
         tabLayout.getTabAt(1).setText(getString(R.string.new_york_usa));
         tabLayout.getTabAt(2).setText(getString(R.string.tokyo_japan));
     }
 
+
     private class WeatherPagerAdapter extends FragmentPagerAdapter {
 
         public WeatherPagerAdapter(FragmentManager fm) {
-            super(fm);
+            super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         }
 
         @Override
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-
                     return WeatherAndForecastFragment.newInstance(
                             R.string.paris_france,
                             R.string.cloudy,
@@ -80,5 +94,45 @@ public class WeatherActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return null;
         }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case 0x7f0a0000:
+                refreshContent();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+
+    private void refreshContent() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    // Simulate network delay
+                    Thread.sleep(2000);
+
+                    // Update UI on the main thread
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(WeatherActivity.this, "Content refreshed", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 }
